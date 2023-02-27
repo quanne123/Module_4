@@ -6,7 +6,7 @@ import org.springframework.stereotype.Service;
 public class CalculateService implements ICalculateService {
 
     @Override
-    public double calculate( double numberOne, double numberTwo,String calculation) {
+    public double calculate(double numberOne, double numberTwo, String calculation) {
         String msg = "";
         double result = 0;
         switch (calculation) {
@@ -20,10 +20,10 @@ public class CalculateService implements ICalculateService {
                 result = numberOne * numberTwo;
                 break;
             case "Division":
-                if(numberTwo != 0) {
+                if (numberTwo != 0) {
                     result = numberOne / numberTwo;
-                }else {
-                     msg = "Error";
+                } else {
+                    msg = "Error";
                 }
                 break;
         }
