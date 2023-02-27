@@ -6,27 +6,27 @@ import org.springframework.stereotype.Service;
 public class CalculateService implements ICalculateService {
 
     @Override
-    public double calculate(double sum, double numberOne, double numberTwo) {
-        String action = null;
+    public double calculate( double numberOne, double numberTwo,String calculation) {
         String msg = "";
-        switch (action) {
+        double result = 0;
+        switch (calculation) {
             case "Addition":
-                sum = numberOne + numberTwo;
+                result = numberOne + numberTwo;
                 break;
             case "Subtraction":
-                sum = numberOne - numberTwo;
+                result = numberOne - numberTwo;
                 break;
             case "Mutiplication":
-                sum = numberOne * numberTwo;
+                result = numberOne * numberTwo;
                 break;
             case "Division":
                 if(numberTwo != 0) {
-                    sum = numberOne / numberTwo;
+                    result = numberOne / numberTwo;
                 }else {
                      msg = "Error";
                 }
                 break;
         }
-        return sum;
+        return result;
     }
 }

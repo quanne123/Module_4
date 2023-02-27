@@ -1,5 +1,5 @@
 package com.example.calculator.service;
 
 public interface ICalculateService {
-    double calculate(double sum, double numberOne, double numberTwo);
+    double calculate( double numberOne, double numberTwo,String calculation);
 }
