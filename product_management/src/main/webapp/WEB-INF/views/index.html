@@ -15,7 +15,9 @@
     <thead>
     <tr>
         <th>Name</th>
-        <th>Type</th>
+        <th>Price</th>
+        <th>Description</th>
+        <th>Producer</th>
         <th>Edit</th>
         <th>Delete</th>
         <th>View</th>
@@ -24,7 +26,9 @@
     <tbody>
     <tr th:each="low,lowStat :${products}">
         <td th:text="${low.getName()}"></td>
-        <td th:text="${low.getType()}"></td>
+        <td th:text="${low.getPrice()}"></td>
+        <td th:text="${low.getDescription()}"></td>
+        <td th:text="${low.getProducer()}"></td>
         <td> <a th:href="@{product/{id}/edit(id=${low.getId()})}">edit</a></td>
 
         <td> <a th:href="@{product/{id}/view(id=${low.getId()})}">view</a></td>
