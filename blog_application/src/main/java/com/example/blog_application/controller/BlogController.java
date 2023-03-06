@@ -27,7 +27,7 @@ public class BlogController {
     @PostMapping("/createBlog")
     public String createBlog(@ModelAttribute(name = "newBlog") Blog newBlog){
         blogService.createBlog(newBlog);
-        return "redirect:/blog";
+        return "redirect:/blogs";
     }
     @GetMapping("/inform/{id}")
     public String getInform(@PathVariable int id, Model model) {
@@ -38,7 +38,7 @@ public class BlogController {
     @GetMapping("/deleteBlog/{id}")
     public String deleteBlog(@PathVariable int id) {
         blogService.deleteBlog(id);
-        return "redirect:/blog";
+        return "redirect:/blogs";
     }
 
     @GetMapping("/showEdit/{id}")
@@ -50,6 +50,6 @@ public class BlogController {
     @PostMapping("/editBlog")
     public String editBlog(@ModelAttribute(name = "blog") Blog blog, Model model) {
         blogService.editBlog(blog);
-        return "redirect:/blog";
+        return "redirect:/blogs";
     }
 }

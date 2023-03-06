@@ -5,8 +5,8 @@
     <title>Create Blog</title>
 </head>
 <body>
-<a href="/blog">Back to the list</a>
-<form action="/blog/createBlog" method="post" th:object="${blog}">
+<a href="/blogs">Back to the list</a>
+<form action="/blogs/createBlog" method="post" th:object="${blog}">
     <div>
         <label>Name of the blog</label>
         <input type="text" th:field="*{title}">
