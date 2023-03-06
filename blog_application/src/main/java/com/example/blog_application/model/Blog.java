@@ -3,7 +3,6 @@ package com.example.blog_application.model;
 import javax.persistence.*;
 
 @Entity
-
 public class Blog {
 @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -15,6 +14,9 @@ public class Blog {
 
     private String author;
 
+    @ManyToOne
+    @JoinColumn(name = "category_id", referencedColumnName = "id")
+    private Category category;
     public Blog() {
     }
 
@@ -56,4 +58,5 @@ public class Blog {
     public void setAuthor(String author) {
         this.author = author;
     }
+
 }
